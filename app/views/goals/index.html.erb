@@ -1,3 +1,9 @@
+<h1>How did you do yesterday?</h1>
+
 <% @goals.each do |goal| %>
-	<%= goal.title %>
+<ul>
+	<li><%= goal.title %></li>
+</ul>
 <% end %>
+
+<%= render 'form' %>
