@@ -17,8 +17,20 @@ class GoalsController < ApplicationController
   		end
   end
   
+  def update
+    @goal = Goal.find(params[:id])
+      if @goal.update_attributes(app_params)
+        redirect_to(goals_path)
+      end
+  end
+  
+  def complete
+    Goal.update_all({done: true}, {:id => params[:goal_ids]})
+    redirect_to goals_path
+  end
+  
 	def app_params
-    params.require(:goal).permit(:title)
+    params.require(:goal).permit(:title, :done)
  	end
  	
 end

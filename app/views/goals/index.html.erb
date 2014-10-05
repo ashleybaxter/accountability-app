@@ -1,9 +1,13 @@
 <h1>How did you do yesterday?</h1>
 
-<% @goals.each do |goal| %>
+<%= form_tag complete_goals_path, :method => :put do %>
+
+<% for goal in @goals %>
 <ul>
-	<li><%= goal.title %></li>
+	<li><%= check_box_tag "goal_ids[]", goal.id %> <%= goal.title %></li>
 </ul>
 <% end %>
 
-<%= render 'form' %>
+<%= submit_tag %>
+
+<% end %>
