@@ -1,7 +1,16 @@
+<% unless @goals.empty? %>
 <h1>Today's Goals</h1>
 
 <% for goal in @goals_incomplete %>
 <ul>
 	<li><%= goal.title %></li>
 </ul>
+<% end %>
+
+	<% else %>
+
+<h1>Today's goals</h1>
+
+<%= render 'form' %>
+
 <% end %>
