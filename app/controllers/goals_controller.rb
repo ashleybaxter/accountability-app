@@ -8,7 +8,6 @@ class GoalsController < ApplicationController
   
   def new
     @goal = Goal.new
-    @goals_incomplete = Goal.find(:all, :conditions => "done IS NULL")
   end
   
   def create
@@ -30,6 +29,10 @@ class GoalsController < ApplicationController
   def complete
     Goal.update_all({done: true}, {:id => params[:goal_ids]})
     redirect_to goals_path
+  end
+  
+  def yesterday
+    @goals_incomplete = Goal.find(:all, :conditions => "done IS NULL")
   end
   
 	def app_params
