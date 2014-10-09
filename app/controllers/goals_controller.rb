@@ -8,6 +8,7 @@ class GoalsController < ApplicationController
   
   def new
     @goal = Goal.new
+    @goals_incomplete = Goal.find(:all, :conditions => "done IS NULL")
   end
   
   def create

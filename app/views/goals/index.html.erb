@@ -1,15 +1,7 @@
-<h1>How did you do yesterday?</h1>
-
-<%= form_tag complete_goals_path, :method => :put do %>
+<h1>Today's Goals</h1>
 
 <% for goal in @goals_incomplete %>
 <ul>
-	<li><%= check_box_tag "goal_ids[]", goal.id %> <%= goal.title %></li>
+	<li><%= goal.title %></li>
 </ul>
 <% end %>
-
-<%= submit_tag %>
-
-<% end %>
-
-<%= render 'form' %>
