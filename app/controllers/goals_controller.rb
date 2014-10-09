@@ -7,6 +7,8 @@ class GoalsController < ApplicationController
   end
   
   def new
+    @goals_incomplete = Goal.find(:all, :conditions => "done IS NULL")
+    @goals_today = Goal.find(:all, :conditions => ["done IS NULL AND created_at", Date.today])
     @goal = Goal.new
   end
   
