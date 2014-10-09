@@ -2,6 +2,8 @@ class GoalsController < ApplicationController
   def index
     @goals = Goal.all
     @goal = Goal.new
+    @goals_done = Goal.find(:all, :conditions => "done")
+    @goals_incomplete = Goal.find(:all, :conditions => "done IS NULL")
   end
   
   def new
