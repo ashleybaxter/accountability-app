@@ -6,16 +6,10 @@ class GoalsController < ApplicationController
     @goals_incomplete = Goal.find(:all, :conditions => "done IS NULL")
   end
   
-  def new
-    @goals_incomplete = Goal.find(:all, :conditions => "done IS NULL")
-    @goals_today = Goal.find(:all, :conditions => ["done IS NULL AND created_at", Date.today])
-    @goal = Goal.new
-  end
-  
   def create
     @goal = Goal.new(app_params)
 		if @goal.save
-   			redirect_to goals_path
+   			redirect_to :back
   		else
     		render('new')
   		end
@@ -33,8 +27,14 @@ class GoalsController < ApplicationController
     redirect_to goals_path
   end
   
-  def yesterday
+  def tomorrow
     @goals_incomplete = Goal.find(:all, :conditions => "done IS NULL")
+  end
+  
+  def today
+    @goals_today = Goal.find(:all, :conditions => ["done IS NULL AND created_at", Date.today])
+    @goals_yesterday_complete = Goal.find(:all, :conditions => ["done IS NOT NULL AND created_at", Date.yesterday])
+    @goal = Goal.new
   end
   
 	def app_params

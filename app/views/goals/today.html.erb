@@ -1,0 +1,16 @@
+<h1>Yesterday's completed goals</h1>
+<% for goal in @goals_yesterday_complete %>
+<ul>
+	<li><%= goal.title %></li>
+</ul>
+<% end %>
+
+<h1>Great, now how about today's goals?</h1>
+
+<% for goal in @goals_today %>
+<ul>
+	<li><%= goal.title %></li>
+</ul>
+<% end %>
+
+<%= render 'form' %>
