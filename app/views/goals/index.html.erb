@@ -11,6 +11,12 @@
 
 <h1>Today's goals</h1>
 
-<%= render 'form' %>
+<%= form_for @goal do |f| %>
+
+<fieldset>
+	<%= f.text_field :title, :placeholder => "Start typing to enter your first goal, then hit enter" %>
+</fieldset>	
+
+<% end %>
 
 <% end %>
