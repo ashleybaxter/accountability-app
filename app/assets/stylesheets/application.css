@@ -61,7 +61,50 @@ table {
 	border-spacing: 0;
 }
 
+body {
+	background-color: #fdf6e1;
+	font-family: "futura-pt", sans-serif;
+	font-size: 15px;
+	color: #ffffff;
+	line-height: 1.3em;
+	margin-bottom: 35px;
+}
+
+.working-out-logo {
+	background: url(logo@2x.png) no-repeat 50% 100%;
+	height: 220px;
+}
+
 .container {
 	width: 760px;
 	margin: 0 auto;
+}
+
+.footer-container {
+	background: -webkit-linear-gradient(#f57651, #f93c4d);
+	background: -o-linear-gradient(#f57651, #f93c4d);
+	background: -moz-linear-gradient(#f57651, #f93c4d);
+	background: linear-gradient(#f57651, #f93c4d);
+}
+
+footer {
+	color: #ffffff;
+	text-align: center;
+	padding: 35px 0;
+}
+	footer a:link, footer a:visited {
+		color: #ffffff;
+	}
+
+.button {
+	border: 2px solid #ffffff;
+	background-color: #f72a38;
+	text-transform: uppercase;
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	color: #ffffff;
+	padding: 10px;
+	margin: 20px 0;
+	display: inline-block;
 }
