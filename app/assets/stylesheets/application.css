@@ -97,6 +97,15 @@ input {
 	width: 250px;
 	margin-top: 10px;
 }
+	input#goal_ids_ {
+		width: 12px;
+	}
+	input.form_submit {
+		margin: 0 auto;
+		display: block;
+		margin-top: 20px;
+		width: 282px;
+	}
 
 li {
 	padding: 15px;
@@ -106,6 +115,10 @@ li {
 	margin-bottom: 2px;
 	border: 1px solid #de512a;
 }
+	li:hover {
+		background-color: #fc4044;
+		border: 1px solid #d51b1f;
+	}
 
 ::-webkit-input-placeholder {
    color:  #d0c49e;
@@ -162,3 +175,18 @@ footer {
 	margin: 20px 0;
 	display: inline-block;
 }
+
+.completed {
+	background-color: #d1f6c9;
+	border: none;
+	padding: 10px;
+	color: #83cc9d;
+	margin-bottom: 2px;
+}
+	.completed:last-child {
+		margin-bottom: 75px;
+	}
+	.completed:hover {
+		background-color: #d1f6c9;
+		border: none;
+	}

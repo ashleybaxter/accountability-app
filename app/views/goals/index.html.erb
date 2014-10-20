@@ -1,5 +1,5 @@
-<% unless @goals.empty? %>
 <div class="grid__col grid__col--3-of-5 grid__col--centered">
+<% unless @goals.empty? %>
 <h1 class="today">Today's Goals</h1>
 
 <% for goal in @goals_incomplete %>
@@ -10,18 +10,17 @@
 
 <%= render 'form' %>
 
-</div>
-
 	<% else %>
 
-<h1 class="today grid__col grid__col--3-of-5 grid__col--centered">Today's goals</h1>
+<h1 class="today">Today's goals</h1>
 
-<%= form_for @goal, html: {:class => "grid__col grid__col--3-of-5 grid__col--centered"} do |f| %>
+<%= form_for @goal do |f| %>
 
 <fieldset>
-	<%= f.text_field :title, :placeholder => "Enter your first goal, then hit enter…" %>
+	<%= f.text_field :title, :placeholder => "Begin typing your first goal, then hit enter…" %>
 </fieldset>	
 
 <% end %>
 
 <% end %>
+</div>

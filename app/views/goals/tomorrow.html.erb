@@ -1,3 +1,4 @@
+<div class="grid__col grid__col--3-of-5 grid__col--centered">
 <h1 class="today">How did you do yesterday?</h1>
 
 <%= form_tag complete_goals_path, :method => :put do %>
@@ -8,6 +9,7 @@
 </ul>
 <% end %>
 
-<%= submit_tag %>
+<%= submit_tag "Save", class: "form_submit" %>
 
 <% end %>
+</div>
