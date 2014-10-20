@@ -60,6 +60,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+textarea:focus, input:focus{
+    outline: 0;
+}
 
 body {
 	background-color: #fdf6e1;
@@ -67,12 +70,63 @@ body {
 	font-size: 15px;
 	color: #ffffff;
 	line-height: 1.3em;
-	margin-bottom: 35px;
+	margin-top: 75px;
+}
+
+h1.today, h1.yesterday {
+	font-size: 28px;
+	color: #f57551;
+	text-align: center;
+	margin-bottom: 25px;
+}
+	h1.yesterday {
+		color: #83cc9d;
+	}
+
+form#new_goal {
+	margin: 35px 0;
+	width: 282px;
+	margin: 0 auto;
+	padding-left: 0;
+}
+
+input {
+	background-color: #f8f8f8;
+	border: 2px dashed #d0c49e;
+	padding: 15px;
+	width: 250px;
+	margin-top: 10px;
+}
+
+li {
+	padding: 15px;
+	background-color: #f57551;
+	width: 250px;
+	margin: 0 auto;
+	margin-bottom: 2px;
+	border: 1px solid #de512a;
+}
+
+::-webkit-input-placeholder {
+   color:  #d0c49e;
+}
+
+:-moz-placeholder {
+   color:  #d0c49e;  
+}
+
+::-moz-placeholder {
+   color:  #d0c49e;  
+}
+
+:-ms-input-placeholder {  
+   color:  #d0c49e;  
 }
 
 .working-out-logo {
 	background: url(logo@2x.png) no-repeat 50% 100%;
 	height: 220px;
+	padding-top: 175px;
 }
 
 .container {
