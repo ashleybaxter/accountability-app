@@ -22,6 +22,13 @@ class GoalsController < ApplicationController
       end
   end
   
+  def destroy
+    @goal = Goal.find(params[:id])
+		@goal.destroy
+
+		redirect_to root_path
+  end
+  
   def complete
     Goal.update_all({done: true}, {:id => params[:goal_ids]})
     redirect_to goals_path
