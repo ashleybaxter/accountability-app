@@ -32,8 +32,8 @@ class GoalsController < ApplicationController
   end
   
   def today
-    @goals_today = Goal.find(:all, :conditions => ["done IS NULL AND created_at", Date.today])
-    @goals_yesterday_complete = Goal.find(:all, :conditions => ["done IS NOT NULL AND created_at", Date.yesterday])
+    @goals_today = Goal.all
+    @goals_yesterday_complete = Goal.all
     @goal = Goal.new
   end
   
