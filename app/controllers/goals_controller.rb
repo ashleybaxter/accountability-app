@@ -18,7 +18,7 @@ class GoalsController < ApplicationController
   def update
     @goal = Goal.find(params[:id])
       if @goal.update_attributes(app_params)
-        redirect_to(goals_path)
+        redirect_to :back
       end
   end
   

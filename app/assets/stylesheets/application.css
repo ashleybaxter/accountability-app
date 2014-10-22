@@ -118,6 +118,8 @@ li {
 	margin: 0 auto;
 	margin-bottom: 2px;
 	border: 1px solid #de512a;
+	text-transform: uppercase;
+	font-size: 90%;
 }
 	li:hover {
 		background-color: #fc4044;
@@ -126,25 +128,21 @@ li {
 
 ::-webkit-input-placeholder {
 	color:  #d0c49e;
-	text-align: center;
 	font-style: italic;
 }
 
 :-moz-placeholder {
 	color:  #d0c49e;
-	text-align: center;
 	font-style: italic;
 }
 
 ::-moz-placeholder {
 	color:  #d0c49e;
-	text-align: center;
 	font-style: italic;
 }
 
 :-ms-input-placeholder {  
 	color:  #d0c49e;
-	text-align: center;
 	font-style: italic;
 }
 
@@ -183,11 +181,11 @@ footer {
 	border: 2px solid #ffffff;
 	background-color: #f72a38;
 	text-transform: uppercase;
-	border-radius: 20px;
-	-webkit-border-radius: 20px;
-	-moz-border-radius: 20px;
+	border-radius: 30px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
 	color: #ffffff;
-	padding: 10px 12px;
+	padding: 15px;
 	margin: 20px 0;
 	display: inline-block;
 }
@@ -214,3 +212,24 @@ footer {
 	position: absolute;
 	right: 480px;
 }
+	.delete:hover {
+		opacity: 0.3;
+		filter: alpha(opacity=30);
+	}
+
+input[type=checkbox] {
+	display:none;
+}
+input[type=checkbox] + label {
+		display:inline-block;
+		margin:-2px;
+		padding: 4px 12px;
+		color: #20a266;
+		text-align: center;
+		border-radius: 20px;
+		-webkit-border-radius: 20px;
+		-moz-border-radius: 20px;
+		vertical-align: middle;
+		cursor: pointer;
+		background-color: #aff99e;
+	}

@@ -1,10 +1,10 @@
 <h1 class="yesterday">Yesterday's completed goals</h1>
 <% unless @goals_yesterday_complete.empty? %>
-<% for goal in @goals_yesterday_complete %>
 <ul>
+<% for goal in @goals_yesterday_complete %>
 	<li class="completed"><%= goal.title %></li>
-</ul>
 <% end %>
+</ul>
 <% end %>
 
 <% if @goals_yesterday_complete.empty? %>

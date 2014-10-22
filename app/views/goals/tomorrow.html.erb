@@ -5,7 +5,8 @@
 
 <% for goal in @goals_incomplete %>
 <ul>
-	<li><%= check_box_tag "goal_ids[]", goal.id %> <%= goal.title %></li>
+	<li><%= check_box_tag "goal_ids[]", goal.id %>
+	<label for="goal_ids_">Done</label><%= goal.title %><%= link_to image_tag('delete.png'), goal_path(goal), :class => 'delete', :method => 'delete', :confirm => "Are you sure?" %></li>
 </ul>
 <% end %>
 
