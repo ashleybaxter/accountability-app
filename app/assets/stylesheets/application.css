@@ -125,6 +125,9 @@ li {
 		background-color: #fc4044;
 		border: 1px solid #d51b1f;
 	}
+	.goals-index li:hover {
+		background-color: #f57551;
+	}
 
 ::-webkit-input-placeholder {
 	color:  #d0c49e;
