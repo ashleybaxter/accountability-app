@@ -122,7 +122,7 @@ li {
 	font-size: 90%;
 }
 	li:hover {
-		background-color: #fc4044;
+		background-color: #eb5f38;
 		border: 1px solid #d51b1f;
 	}
 	.goals-index li:hover {
@@ -235,4 +235,14 @@ input[type=checkbox] + label {
 		vertical-align: middle;
 		cursor: pointer;
 		background-color: #aff99e;
+		float: right;
 	}
+		input[type=checkbox] + label:hover {
+			background-color: #97d988;
+			}
+
+.empty {
+	color: #d0c49e;
+	text-align: center;
+	margin-bottom: 25px;
+}
