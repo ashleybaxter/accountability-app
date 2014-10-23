@@ -3,12 +3,12 @@
 
 <%= form_tag complete_goals_path, :method => :put do %>
 
-<% for goal in @goals_incomplete %>
 <ul>
+<% for goal in @goals_incomplete %>
 	<li><%= check_box_tag "goal_ids[]", goal.id %>
-	<label for="goal_ids_">Done</label><%= goal.title %><%= link_to image_tag('delete.png'), goal_path(goal), :class => 'delete', :method => 'delete', :confirm => "Are you sure?" %></li>
-</ul>
+	<%= goal.title %><%= link_to image_tag('delete.png'), goal_path(goal), :class => 'delete', :method => 'delete', :confirm => "Are you sure?" %></li>
 <% end %>
+</ul>
 
 <%= submit_tag "Save", class: "form_submit" %>
 

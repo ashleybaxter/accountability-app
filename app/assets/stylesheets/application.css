@@ -220,9 +220,6 @@ footer {
 		filter: alpha(opacity=30);
 	}
 
-input[type=checkbox] {
-	display:none;
-}
 input[type=checkbox] + label {
 		display:inline-block;
 		margin:-2px;
