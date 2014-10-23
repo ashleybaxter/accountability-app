@@ -8,7 +8,6 @@
 	<li><%= check_box_tag "goal_ids_#{goal.id}", goal.id, false, :name => "goal_ids[]", :multiple => true %>
 			<%= label_tag ("goal_ids_#{goal.id}"), "Done" %>
 			<%= goal.title %><%= link_to image_tag('delete.png'), goal_path(goal), :class => 'delete', :method => 'delete', :confirm => "Are you sure?" %></li>
-			<div id="button1"></div>
 <% end %>
 </ul>
 
