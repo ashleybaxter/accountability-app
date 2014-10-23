@@ -185,7 +185,7 @@ footer {
 	footer p {
 		width: 80%;
 		margin: 0 auto;
-		line-height: 26px;
+		line-height: 28px;
 	}
 
 .button {
@@ -200,6 +200,7 @@ footer {
 	margin: 20px 0;
 	font-size: 16px;
 	display: inline-block;
+	width: 230px;
 }
 	.button a:link, .button a:visited {
 		text-decoration: none;
