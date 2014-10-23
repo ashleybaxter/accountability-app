@@ -1,8 +1,6 @@
 <div class="grid__col grid__col--3-of-5 grid__col--centered">
-<h1 class="today">How did you do yesterday?</h1>
-
+<h1 class="header-red">How did you do yesterday?</h1>
 <%= form_tag complete_goals_path, :method => :put do %>
-
 <ul>
 <% for goal in @goals_incomplete %>
 	<li><%= check_box_tag "goal_ids_#{goal.id}", goal.id, false, :name => "goal_ids[]", :multiple => true %>
@@ -12,6 +10,5 @@
 </ul>
 
 <%= submit_tag "Save", class: "form_submit" %>
-
 <% end %>
 </div>

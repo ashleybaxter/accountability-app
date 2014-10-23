@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>AccountabilityApp</title>
+  <title>Toddle</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
@@ -12,9 +12,7 @@
 <body>
 <div class="container">
 	<div class="grid">
-
 <%= yield %>
-
 	</div>
 </div>
 
@@ -22,16 +20,13 @@
 </div>
 <div class="footer-container">
 	<div class="container">
-	<div class="grid">
-
-<footer class="grid__col grid__col--12-of-12">
-	<p>Join <a href="http://twitter.com/iamashley">Ashley Baxter</a> and <a href="http://twitter.com/paddydonnelly">Paddy Donnelly</a> on a journey to figure out how to create a business doing what you love.</p>
+		<div class="grid">
+			<footer class="grid__col grid__col--12-of-12">
+				<p>Join <a href="http://twitter.com/iamashley">Ashley Baxter</a> and <a href="http://twitter.com/paddydonnelly">Paddy Donnelly</a> on a journey to figure out how to create a business doing what you love.</p>
 	<span class="button"><a href="http://workingoutpodcast.com">Listen to the podcast</a></span>
-</footer>
-	
-	</div>
+			</footer>
+		</div>
 	</div>
 </div>
-
 </body>
 </html>

@@ -1,26 +1,18 @@
 <div class="grid__col grid__col--3-of-5 grid__col--centered goals-index">
 <% unless @goals.empty? %>
-<h1 class="today">Today's Goals</h1>
-
+<h1 class="header-red">Today's Goals</h1>
 <ul>
 <% for goal in @goals_incomplete %>
 	<li><%= goal.title %><%= link_to image_tag('delete.png'), goal_path(goal), :class => 'delete', :method => 'delete', :confirm => "Are you sure?" %></li>
 <% end %>
 </ul>
-
 <%= render 'form' %>
-
 	<% else %>
-
 <h1 class="today">Today's goals</h1>
-
 <%= form_for @goal do |f| %>
-
 <fieldset>
 	<%= f.text_field :title, :placeholder => "Begin typing your first goal, then hit enter…" %>
 </fieldset>	
-
 <% end %>
-
 <% end %>
 </div>

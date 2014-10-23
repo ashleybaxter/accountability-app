@@ -1,4 +1,4 @@
-<h1 class="yesterday">Yesterday's completed goals</h1>
+<h1 class="header-green">Yesterday's completed goals</h1>
 <% unless @goals_yesterday_complete.empty? %>
 <ul>
 <% for goal in @goals_yesterday_complete %>
@@ -11,14 +11,13 @@
 	<p class="empty">You haven't marked any as complete yet!</p>
 <% end %>
 
-<h1 class="today">Great, now how about today's goals?</h1>
-
+<h1 class="header-red">Great, now how about today's goals?</h1>
 <% unless @goals_today.empty? %>
-<% for goal in @goals_today %>
 <ul>
-	<li><%= goal.title %></li>
-</ul>
+<% for goal in @goals_today %>
+	<li><%= goal.title %><%= goal.title %><%= link_to image_tag('delete.png'), goal_path(goal), :class => 'delete', :method => 'delete', :confirm => "Are you sure?" %></li>
 <% end %>
+</ul>
 <% end %>
 
 <%= render 'form' %>
