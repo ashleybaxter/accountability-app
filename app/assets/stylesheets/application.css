@@ -82,6 +82,7 @@ h1.today, h1.yesterday {
 	color: #f57551;
 	text-align: center;
 	margin-bottom: 25px;
+	font-weight: 600;
 }
 	h1.yesterday {
 		color: #83cc9d;
@@ -103,6 +104,7 @@ input {
 }
 	input#goal_ids_ {
 		width: 12px;
+		margin-top: 0;
 	}
 	input.form_submit {
 		margin: 0 auto;
@@ -179,6 +181,11 @@ footer {
 	footer a:hover {
 		color: #f0da56;
 	}
+	footer p {
+		width: 80%;
+		margin: 0 auto;
+		line-height: 26px;
+	}
 
 .button {
 	border: 2px solid #ffffff;
@@ -190,6 +197,7 @@ footer {
 	color: #ffffff;
 	padding: 15px;
 	margin: 20px 0;
+	font-size: 16px;
 	display: inline-block;
 }
 	.button a:link, .button a:visited {
