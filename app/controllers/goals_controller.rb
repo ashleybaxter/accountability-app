@@ -10,9 +10,7 @@ class GoalsController < ApplicationController
     @goal = Goal.new(app_params)
 		if @goal.save
    			redirect_to :back
-  		else
-    		render('new')
-  		end
+  	end
   end
   
   def update

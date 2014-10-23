@@ -161,7 +161,7 @@ input {
 	background-color: #f8f0d9;
 	border: 2px dashed #d0c49e;
 	padding: 15px;
-	width: 250px;
+	width: 248px;
 	margin-top: 10px;
 	text-transform: uppercase;
 }
@@ -173,8 +173,16 @@ input {
 		margin: 0 auto;
 		display: block;
 		margin-top: 20px;
-		width: 282px;
 		cursor: pointer;
+		text-transform: uppercase;
+		border-radius: 20px;
+		-webkit-border-radius: 20px;
+		-moz-border-radius: 20px;
+		padding: 10px;
+		font-size: 15px;
+		width: 150px;
+		border: 2px solid #d0c49e;
+		color: #d0c49e;
 	}
 	input[type=checkbox] {
 		display:none;
