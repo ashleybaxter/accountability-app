@@ -113,6 +113,14 @@ li {
 		background-color: #f57551;
 	}
 
+.rollover-goal {
+	color: #d51b1f;
+	font-size: 10px;
+	font-style: italic;
+	margin-top: -5px;
+	display: block;
+}
+
 .button {
 	border: 2px solid #ffffff;
 	background-color: #f72a38;
