@@ -115,6 +115,9 @@ li {
 	.rollover {
 		background-color: #fc4044;
 	}
+	.rollover:hover {
+		background-color: #fc4044;
+	}
 
 .rollover-goal {
 	color: #d51b1f;
