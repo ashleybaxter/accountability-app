@@ -112,6 +112,9 @@ li {
 	.goals-index li:hover {
 		background-color: #f57551;
 	}
+	.rollover {
+		background-color: #fc4044;
+	}
 
 .rollover-goal {
 	color: #d51b1f;
