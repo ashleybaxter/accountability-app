@@ -184,7 +184,7 @@ input {
 		width: 12px;
 		margin-top: 0;
 	}
-	input.form_submit {
+	input.form_submit, .finished {
 		margin: 0 auto;
 		display: block;
 		margin-top: 20px;
@@ -199,6 +199,8 @@ input {
 		border: 2px solid #d0c49e;
 		color: #d0c49e;
 	}
+	.finished { width: auto; text-align: center; }
+	.finished:link, .finished:visited { text-decoration: none; }
 	input[type=checkbox] {
 		display:none;
 	}
