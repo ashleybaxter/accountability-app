@@ -39,6 +39,7 @@ class GoalsController < ApplicationController
   end
   
   def today
+    authorize! :read, @goal
     @goals = Goal.where(:user_id => current_user)
     @goals_today = @goals.find(:all, :conditions => ["done IS NULL"])
     @goals_yesterday_complete = @goals.where(["done IS NOT NULL AND updated_at >= :date", date: Date.today.to_date]).all

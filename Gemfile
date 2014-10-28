@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.0.2'
 gem 'omniauth-twitter'
-gem 'cancan'
+gem 'cancancan', '~> 1.9'
 
 group :development do
   gem 'sqlite3'
