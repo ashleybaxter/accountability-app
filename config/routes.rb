@@ -1,6 +1,8 @@
 AccountabilityApp::Application.routes.draw do
   
   root :to => "goals#index" 
+  get 'auth/twitter/callback' => 'sessions#create'
+  get 'signout', to: 'sessions#destroy', as: 'signout'
   
   resources :goals do
     get 'tomorrow', :on => :collection
