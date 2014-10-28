@@ -88,6 +88,7 @@ h1.header-red, h1.header-green {
 	text-align: center;
 	margin-bottom: 25px;
 	font-weight: 600;
+	line-height: 28px;
 }
 	h1.header-green {
 		color: #83cc9d;

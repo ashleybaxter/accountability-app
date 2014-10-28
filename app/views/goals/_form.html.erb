@@ -2,4 +2,5 @@
 <fieldset>
 	<%= f.text_field :title, :placeholder => "Add a new goal" %>
 </fieldset>	
+<%= link_to "These are all my goals for today", new_goal_path, class: "finished", remote: true %>
 <% end %>

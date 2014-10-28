@@ -6,6 +6,11 @@ class GoalsController < ApplicationController
     @goals_incomplete = Goal.find(:all, :conditions => "done IS NULL")
   end
   
+  def new
+    @goal = Goal.new
+    @goals_incomplete = Goal.find(:all, :conditions => "done IS NULL")
+  end
+  
   def create
     @goal = Goal.new(app_params)
 		if @goal.save
