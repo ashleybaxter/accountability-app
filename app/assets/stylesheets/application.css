@@ -161,7 +161,7 @@ li {
 		margin-bottom: 75px;
 	}
 	.completed:hover {
-		background-color: #d1f6c9;
+		background-color: #d1f6c9 !important;
 		border: none;
 	}
 

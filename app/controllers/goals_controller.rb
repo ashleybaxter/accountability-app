@@ -18,13 +18,6 @@ class GoalsController < ApplicationController
   	end
   end
   
-  def update
-    @goal = Goal.find(params[:id])
-      if @goal.update_attributes(app_params)
-        redirect_to :back
-      end
-  end
-  
   def destroy
     @goal = Goal.find(params[:id])
 		@goal.destroy
@@ -34,7 +27,7 @@ class GoalsController < ApplicationController
   
   def complete
     Goal.update_all({done: true}, {:id => params[:goal_ids]})
-    redirect_to goals_path
+    redirect_to today_goals_path
   end
   
   def tomorrow

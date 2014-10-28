@@ -1,4 +1,5 @@
-<h1 class="header-green">Yesterday's completed goals</h1>
+<div class="goals-index">
+	<h1 class="header-green">Yesterday's completed goals</h1>
 <% unless @goals_yesterday_complete.empty? %>
 <ul>
 <% for goal in @goals_yesterday_complete %>
@@ -24,3 +25,4 @@
 <% end %>
 
 <%= render 'form' %>
+</div>
