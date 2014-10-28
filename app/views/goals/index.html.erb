@@ -1,3 +1,4 @@
+<% if current_user %>
 <div class="grid__col grid__col--3-of-5 grid__col--centered goals-index">
 <% unless @goals.empty? %>
 <h1 class="header-red">Today's Goals</h1>
@@ -13,7 +14,13 @@
 <fieldset>
 	<%= f.text_field :title, :placeholder => "Begin typing your first goal, then hit enter" %>
 </fieldset>	
-<%= link_to "Save all of today's goals", new_goal_path, class: "finished, form_submit", remote: true %>
+<%= link_to "Save all of today's goals", new_goal_path, class: "finished", remote: true %>
 <% end %>
 <% end %>
 </div>
+
+<% else %>
+
+<p class="empty">Sign in with Twitter to get started on tracking your daily goals.</p>
+
+<%end %>

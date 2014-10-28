@@ -1,18 +1,22 @@
 class GoalsController < ApplicationController
+  load_and_authorize_resource
+  
   def index
-    @goals = Goal.all
+    @goals = Goal.where(:user_id => current_user)
     @goal = Goal.new
-    @goals_done = Goal.find(:all, :conditions => "done")
-    @goals_incomplete = Goal.find(:all, :conditions => "done IS NULL")
+    @goals_done = @goals.find(:all, :conditions => "done")
+    @goals_incomplete = @goals.find(:all, :conditions => "done IS NULL")
   end
   
   def new
+    @goals = Goal.where(:user_id => current_user)
     @goal = Goal.new
-    @goals_incomplete = Goal.find(:all, :conditions => "done IS NULL")
+    @goals_incomplete = @goals.find(:all, :conditions => "done IS NULL")
   end
   
   def create
     @goal = Goal.new(app_params)
+    @goal.user = current_user
 		if @goal.save
    			redirect_to :back
   	end
@@ -35,8 +39,9 @@ class GoalsController < ApplicationController
   end
   
   def today
-    @goals_today = Goal.find(:all, :conditions => ["done IS NULL"])
-    @goals_yesterday_complete = Goal.where(["done IS NOT NULL AND updated_at >= :date", date: Date.today.to_date]).all
+    @goals = Goal.where(:user_id => current_user)
+    @goals_today = @goals.find(:all, :conditions => ["done IS NULL"])
+    @goals_yesterday_complete = @goals.where(["done IS NOT NULL AND updated_at >= :date", date: Date.today.to_date]).all
     @goal = Goal.new
   end
   

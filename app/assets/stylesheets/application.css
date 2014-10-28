@@ -130,7 +130,12 @@ li {
 
 .user-nav, .user-nav a:link, .user-nav a:visited {
 	color: #d0c49e;
-	text-decoration: none;
+	padding-bottom: 75px;
+	margin-top: -40px;
+}
+
+.user-nav a:hover {
+	color: #d51b1f;
 }
 
 .button {
