@@ -128,6 +128,11 @@ li {
 	display: block;
 }
 
+.user-nav, .user-nav a:link, .user-nav a:visited {
+	color: #d0c49e;
+	text-decoration: none;
+}
+
 .button {
 	border: 2px solid #ffffff;
 	background-color: #f72a38;
