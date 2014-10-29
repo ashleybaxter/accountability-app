@@ -15,12 +15,11 @@
 		<% flash.each do |name, msg| %>
       <%= content_tag :div, msg, id: "flash_#{name}" %>
     <% end %>
-		<div class="user-nav">
+		<div class="user-nav grid__col grid__col--12-of-12">
 			<% if current_user %>
-				Signed in as <%= current_user.name %>!
-				<%= link_to "Sign out", signout_path %>
+				<%= link_to "Sign out", signout_path, :class => "signout" %>
 				<% else %>
-		  <%= link_to "Sign in with Twitter", "/auth/twitter"%>
+		  <%= link_to "Sign in with Twitter", "/auth/twitter", :class => "button" %>
 		<% end %>
 		</div>
 <%= yield %>

@@ -130,13 +130,34 @@ li {
 
 .user-nav, .user-nav a:link, .user-nav a:visited {
 	color: #d0c49e;
-	padding-bottom: 75px;
 	margin-top: -40px;
 }
+	.user-nav a:link, .user-nav a:visited {display: block; margin: 0 auto; text-align: center; color: #ffffff; text-decoration: none; }
+	.user-nav { padding-bottom: 75px; }
+	.user-nav a:hover { color: #ffffff; }
 
-.user-nav a:hover {
-	color: #d51b1f;
+a.signout {
+	text-align: right !important;
+	display: block !important;
+	color: #d0c49e !important;
 }
+
+.finished { 
+	border: 2px solid #ffffff;
+	background-color: #f72a38;
+	text-transform: uppercase;
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	color: #ffffff;
+	padding: 10px;
+	font-size: 15px;
+	display: block;
+	margin: 0 auto;
+	margin-top: 20px;
+	text-align: center; }
+.finished:link, .finished:visited { text-decoration: none; color: #ffffff }
+.finished:hover { background-color: #f57651; }
 
 .button {
 	border: 2px solid #ffffff;
@@ -194,7 +215,7 @@ input {
 		width: 12px;
 		margin-top: 0;
 	}
-	input.form_submit, .finished {
+	input.form_submit {
 		margin: 0 auto;
 		display: block;
 		margin-top: 20px;
@@ -209,8 +230,6 @@ input {
 		border: 2px solid #d0c49e;
 		color: #d0c49e;
 	}
-	.finished { width: auto; text-align: center; }
-	.finished:link, .finished:visited { text-decoration: none; }
 	input[type=checkbox] {
 		display:none;
 	}
