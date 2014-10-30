@@ -34,8 +34,8 @@ class GoalsController < ApplicationController
   end
   
   def tomorrow
-    @goals_incomplete = Goal.find(:all, :conditions => "done IS NULL")
     @goals = Goal.where(:user_id => current_user)
+    @goals_incomplete = @goals.find(:all, :conditions => "done IS NULL")
   end
   
   def today
