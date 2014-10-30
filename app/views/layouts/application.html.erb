@@ -12,16 +12,21 @@
 <body>
 <div class="container">
 	<div class="grid">
-		<% flash.each do |name, msg| %>
-      <%= content_tag :div, msg, id: "flash_#{name}" %>
-    <% end %>
 		<div class="user-nav grid__col grid__col--12-of-12">
+			<% flash.each do |name, msg| %>
+	      <%= content_tag :div, msg, id: "flash_#{name}" %>
+	    <% end %>
 			<% if current_user %>
 				<%= link_to "Sign out", signout_path, :class => "signout" %>
 				<% else %>
 		  <%= link_to "Sign in with Twitter", "/auth/twitter", :class => "button" %>
 		<% end %>
 		</div>
+				<% unless @goals_incomplete.empty? %><div class="check-off grid__col grid__col--12-of-12">Hey <%= current_user.name %>, are you ready to check off some of yesterday's goals? <%= link_to tomorrow_goals_path do %>
+					<%= "Yes" %>
+				<% end %>
+				<%= link_to "No", root_path %></div>
+				<% end %>
 <%= yield %>
 	</div>
 </div>

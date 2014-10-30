@@ -14,7 +14,7 @@
 <fieldset>
 	<%= f.text_field :title, :placeholder => "Begin typing your first goal, then hit enter" %>
 </fieldset>	
-<%= link_to "Save all of today's goals", new_goal_path, class: "finished", remote: true %>
+<% unless @goals_incomplete.empty? %><%= link_to "Save all of today's goals", new_goal_path, class: "finished", remote: true %><% end %>
 <% end %>
 <% end %>
 </div>

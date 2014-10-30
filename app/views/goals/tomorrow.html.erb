@@ -1,0 +1,14 @@
+<div class="grid__col grid__col--3-of-5 grid__col--centered">
+<h1 class="header-red">How did you do with your goals?</h1>
+<%= form_tag complete_goals_path, :method => :put do %>
+<ul>
+<% for goal in @goals_incomplete %>
+	<li><%= check_box_tag "goal_ids_#{goal.id}", goal.id, false, :name => "goal_ids[]", :multiple => true %>
+			<%= label_tag ("goal_ids_#{goal.id}"), "Done" %>
+			<%= goal.title %><%= link_to image_tag('delete.png'), goal_path(goal), :class => 'delete', :method => 'delete', :confirm => "Are you sure?" %></li>
+<% end %>
+</ul>
+
+<%= submit_tag "Save", class: "form_submit" %>
+<% end %>
+</div>
