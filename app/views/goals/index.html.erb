@@ -1,4 +1,5 @@
 <% if current_user %>
+<% unless @goals_incomplete.empty? %><div class="check-off grid__col grid__col--12-of-12"><%= link_to "Check off yesterday's goals", tomorrow_goals_path %></div><% end %>
 <div class="grid__col grid__col--3-of-5 grid__col--centered goals-index">
 <% unless @goals.empty? %>
 <h1 class="header-red">Today's Goals</h1>

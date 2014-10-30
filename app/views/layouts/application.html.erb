@@ -22,11 +22,6 @@
 		  <%= link_to "Sign in with Twitter", "/auth/twitter", :class => "button" %>
 		<% end %>
 		</div>
-				<% unless @goals_incomplete.empty? %><div class="check-off grid__col grid__col--12-of-12">Hey <%= current_user.name %>, are you ready to check off some of yesterday's goals? <%= link_to tomorrow_goals_path do %>
-					<%= "Yes" %>
-				<% end %>
-				<%= link_to "No", root_path %></div>
-				<% end %>
 <%= yield %>
 	</div>
 </div>
