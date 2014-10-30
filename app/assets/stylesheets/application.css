@@ -332,6 +332,9 @@ footer {
 	.check-off a:link:first-child {
 		margin-right: 10px;
 	}
+	.check-off a:hover {
+		color: #f72a38;
+	}
 
 .empty {
 	color: #d0c49e;
