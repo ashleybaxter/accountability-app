@@ -1,6 +1,8 @@
 <%= form_for @goal do |f| %>
 <fieldset>
 	<%= f.text_field :title, :placeholder => "Add a goal, hit enter" %>
-</fieldset>	
-<% unless @goals_incomplete.empty? %><%= link_to "Save all of today's goals", new_goal_path, :class => "finished", remote: true %><% end %>
+</fieldset>
+<% unless @goals_incomplete.empty? %>
+<% if @goals_incomplete.last.created_at > 10.seconds.ago %><%= link_to "Save all of today's goals", new_goal_path, :class => "finished", remote: true %><% end %>
+<% end %>
 <% end %>
