@@ -24,7 +24,6 @@ class GoalsController < ApplicationController
   def destroy
     @goal = Goal.find(params[:id])
 		@goal.destroy
-
 		redirect_to root_path
   end
   
