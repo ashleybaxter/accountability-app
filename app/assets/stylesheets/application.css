@@ -173,6 +173,7 @@ a.signout:hover { color: #f57551 !important; }
 	font-size: 15px;
 	display: inline-block;
 	width: 180px;
+	text-decoration: none;
 }
 	.button a:link, .button a:visited {
 		text-decoration: none;
