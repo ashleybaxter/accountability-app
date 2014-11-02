@@ -316,6 +316,7 @@ footer {
 .delete {
 	position: absolute;
 	right: -30px;
+	bottom: 35%;
 }
 
 .check-off {

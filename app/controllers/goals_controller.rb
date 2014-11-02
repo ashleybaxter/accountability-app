@@ -29,7 +29,7 @@ class GoalsController < ApplicationController
   end
   
   def complete
-    Goal.update_all({done: true}, {:id => params[:goal_ids]})
+    Goal.update_all({done: true}, {:id => params[:goal_ids]}, updated_at: DateTime.now)
     redirect_to today_goals_path
   end
   
@@ -41,7 +41,7 @@ class GoalsController < ApplicationController
   def today
     @goals = Goal.where(:user_id => current_user)
     @goals_today = @goals.find(:all, :conditions => ["done IS NULL"])
-    @goals_yesterday_complete = @goals.where(["done IS NOT NULL AND updated_at >= :date", date: Date.today.to_date]).all
+    @goals_yesterday_complete = @goals.where(["done IS NOT NULL AND updated_at >= :date", date: Date.today.to_date])
     @goal = Goal.new
     @goals_incomplete = @goals.find(:all, :conditions => "done IS NULL")
   end
