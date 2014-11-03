@@ -28,7 +28,7 @@ class GoalsController < ApplicationController
   end
   
   def complete
-    Goal.update_all({done: true}, {:id => params[:goal_ids]}, updated_at: DateTime.now)
+    Goal.update_all({done: true, :updated_at => Time.now}, {:id => params[:goal_ids]})
     redirect_to today_goals_path
   end
   
