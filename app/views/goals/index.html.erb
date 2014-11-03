@@ -13,7 +13,7 @@
 <h1 class="header-red">Today's goals</h1>
 <%= form_for @goal do |f| %>
 <fieldset>
-	<%= f.text_field :title, :placeholder => "Add your first goal, hit enter" %>
+	<%= f.text_field :title, :placeholder => "Add your first goal, hit enter", :autofocus => true %>
 </fieldset>
 <% unless @goals_incomplete.empty? %>
 <% if @goals_incomplete.last.created_at > 10.seconds.ago %><%= link_to "Save all of today's goals", tomorrow_goals_path, class: "finished" %><% end %>
