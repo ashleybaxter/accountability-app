@@ -13,7 +13,7 @@
 <%= render 'form' %>
 </div>
 
-<% elsif @goals.any? && @goals.last.created_at.to_date == Date.yesterday %>
+<% elsif @goals.any? && @goals.last.created_at.to_date <= Date.yesterday %>
 	
 <div class="grid__col grid__col--3-of-5 grid__col--centered">
 <h1 class="header-red">How did you do with your goals?</h1>
