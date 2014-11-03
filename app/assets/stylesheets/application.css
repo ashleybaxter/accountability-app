@@ -320,13 +320,14 @@ footer {
 	bottom: 35%;
 }
 
-.check-off {
+.check-off a {
 	background-color: #f8f0d9;
 	border: 1px solid #d0c49e;
 	padding: 10px;
 	text-align: center;
 	margin-bottom: 35px;
 	color: #d0c49e;
+	display: block;
 }
 	.check-off a:link, .check-off a:visited {
 		color: #f57551 ;
