@@ -1,4 +1,4 @@
-<div class="check-off grid__col grid__col--3-of-5 grid__col--centered"><%= link_to "Check off yesterday's goals", tomorrow_goals_path unless @goals_incomplete.empty? %></div>
+<div class="grid__col grid__col--3-of-5 grid__col--centered"><%= link_to "Check off yesterday's goals", tomorrow_goals_path, :class => "check-off" unless @goals_incomplete.empty? %></div>
 
 <div class="goals-index">
 	<h1 class="header-green">Yesterday's completed goals</h1>

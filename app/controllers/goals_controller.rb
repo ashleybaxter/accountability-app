@@ -45,6 +45,12 @@ class GoalsController < ApplicationController
     @goals_incomplete = @goals.find(:all, :conditions => "done IS NULL")
   end
   
+  def done
+    @goals = Goal.where(:user_id => current_user)
+    @goals_incomplete = @goals.find(:all, :conditions => "done IS NULL")
+    @goal = Goal.new
+  end
+  
 	def app_params
     params.require(:goal).permit(:title, :done)
  	end

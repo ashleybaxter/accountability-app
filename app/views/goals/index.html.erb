@@ -1,9 +1,9 @@
 <% if current_user %>
-<div class="check-off grid__col grid__col--3-of-5 grid__col--centered"><%= link_to "Check off yesterday's goals", tomorrow_goals_path unless @goals_incomplete.empty? %></div>
 
+<%= render 'empty_state' if @goals.empty? %>
 
+<% if @goals.any? && @goals.last.created_at.to_date == Date.today %>
 <div class="grid__col grid__col--3-of-5 grid__col--centered goals-index">
-<% unless @goals.empty? %>
 <h1 class="header-red">Today's Goals</h1>
 <ul>
 <% for goal in @goals_incomplete %>
@@ -11,19 +11,23 @@
 <% end %>
 </ul>
 <%= render 'form' %>
-	<% else %>
-<h1 class="header-red">Today's goals</h1>
-<%= form_for @goal do |f| %>
-<fieldset>
-	<%= f.text_field :title, :placeholder => "Add your first goal, hit enter", :autofocus => true %>
-</fieldset>
-<% unless @goals_incomplete.empty? %>
-<% if @goals_incomplete.last.created_at > 10.seconds.ago %><%= link_to "Save all of today's goals", tomorrow_goals_path, class: "finished" %><% end %>
-<% end %>
-<% end %>
-<% end %>
 </div>
 
-<% else %>
+<% elsif @goals.any? && @goals.last.created_at.to_date == Date.yesterday %>
+	
+<div class="grid__col grid__col--3-of-5 grid__col--centered">
+<h1 class="header-red">How did you do with your goals?</h1>
+<%= form_tag complete_goals_path, :method => :put do %>
+<ul>
+<% for goal in @goals_incomplete %>
+	<li><%= check_box_tag "goal_ids_#{goal.id}", goal.id, false, :name => "goal_ids[]", :multiple => true %>
+			<%= label_tag ("goal_ids_#{goal.id}"), "Done" %>
+			<%= goal.title %><%= link_to image_tag('delete.png'), goal_path(goal), :class => 'delete', :method => 'delete', :confirm => "Are you sure?" %></li>
+<% end %>
+</ul>
+<%= submit_tag "Save", class: "form_submit" %>
+<% end %>
+</div>
+<% end %>
 
 <% end %>

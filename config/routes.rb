@@ -1,6 +1,6 @@
 AccountabilityApp::Application.routes.draw do
+  root :to => "goals#index"
   
-  root :to => "goals#index" 
   get 'auth/twitter/callback' => 'sessions#create'
   get 'signout', to: 'sessions#destroy', as: 'signout'
   get 'auth/failure', to: redirect('/')
@@ -8,6 +8,7 @@ AccountabilityApp::Application.routes.draw do
   resources :goals do
     get 'tomorrow', :on => :collection
     get 'today', :on => :collection
+    get 'done', :on => :collection
     collection do
       put :complete
     end
