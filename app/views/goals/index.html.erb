@@ -1,8 +1,6 @@
 <% if current_user %>
 
-<%= render 'empty_state' if @goals.empty? %>
-
-<% if @goals.any? && @goals.last.created_at.to_date == Date.today %>
+<% if @goals_incomplete.any? && @goals_incomplete.last.created_at.to_date == Date.today %>
 <div class="grid__col grid__col--3-of-5 grid__col--centered goals-index">
 <h1 class="header-red">Today's Goals</h1>
 <ul>
@@ -13,7 +11,7 @@
 <%= render 'form' %>
 </div>
 
-<% elsif @goals.any? && @goals.last.created_at.to_date <= Date.yesterday %>
+<% elsif @goals_incomplete.any? && @goals_incomplete.last.created_at.to_date <= Date.yesterday %>
 	
 <div class="grid__col grid__col--3-of-5 grid__col--centered">
 <h1 class="header-red">How did you do with your goals?</h1>
@@ -28,6 +26,11 @@
 <%= submit_tag "Save", class: "form_submit" %>
 <% end %>
 </div>
+
+<% else %>
+
+<%= render 'empty_state' %>
+
 <% end %>
 
 <% end %>

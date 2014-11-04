@@ -6,9 +6,8 @@ AccountabilityApp::Application.routes.draw do
   get 'auth/failure', to: redirect('/')
   
   resources :goals do
-    get 'tomorrow', :on => :collection
-    get 'today', :on => :collection
-    get 'done', :on => :collection
+    get 'completed', :on => :collection
+    get 'message', :on => :collection
     collection do
       put :complete
     end
