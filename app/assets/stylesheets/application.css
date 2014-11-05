@@ -79,6 +79,9 @@ body {
 	.welcome p {
 		padding-bottom: 75px;
 	}
+	.welcome h1 {
+		margin-bottom: 10px !important;
+	}
 
 .container {
 	max-width: 760px;
