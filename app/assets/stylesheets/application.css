@@ -76,9 +76,9 @@ body {
 	color: #f57551;
 	text-align: center;
 }
-	.welcome p {
+	.welcome p { font-size: 18px; margin-bottom: 10px; }
+	.welcome p:last-child {
 		padding-bottom: 75px;
-		font-size: 18px;
 	}
 	.welcome h1 {
 		font-size: 38px !important;
