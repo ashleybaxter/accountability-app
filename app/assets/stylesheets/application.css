@@ -83,6 +83,7 @@ body {
 	.welcome h1 {
 		font-size: 38px !important;
 		margin-bottom: 15px !important;
+		color: #f75b4f !important;
 	}
 
 .container {
@@ -349,6 +350,10 @@ input {
 	background: -o-linear-gradient(#f57651, #f93c4d);
 	background: -moz-linear-gradient(#f57651, #f93c4d);
 	background: linear-gradient(#f57651, #f93c4d);
+}
+
+.header-container {
+	background-color: #f75b4f;
 }
 
 footer {
