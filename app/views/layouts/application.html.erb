@@ -10,18 +10,31 @@
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
 <body>
+<div class="footer-container">
+	<div class="container">
+		<div class="grid grid__col grid__col--12-of-12 header">
+				<%= link_to image_tag('toddle.png'), root_path %>
+				
+				<ul class="header-nav">
+					<% if current_user %>
+					<li><%= link_to "Today", root_path %></li>
+					<li><%= link_to "Sign out", signout_path %></li>
+					<% end %>
+				</ul>
+				
+		</div>
+	</div>
+</div>
+
 <div class="container">
 	<div class="grid">
-		<div class="user-nav grid__col grid__col--12-of-12">
-			<% flash.each do |name, msg| %>
-	      <%= content_tag :div, msg, id: "flash_#{name}" %>
-	    <% end %>
-			<% if current_user %>
-				<%= link_to "Sign out", signout_path, :class => "signout" %>
-				<% else %>
-		  <%= link_to "Sign in with Twitter", "/auth/twitter", :class => "button" %>
-		<% end %>
+		<% unless current_user %>
+		<div class="grid__col grid__col--3-of-5 grid__col--centered welcome">
+		<h1 class="header-red">Welcome to Toddle</h1>
+		<p>Take baby steps towards your goals</p>
+		<%= link_to "Sign in with Twitter", "/auth/twitter", :class => "button" %>
 		</div>
+			<% end %>
 <%= yield %>
 	</div>
 </div>
