@@ -76,10 +76,10 @@ body {
 	color: #f57551;
 	text-align: center;
 }
-	.welcome p { font-size: 18px; margin-bottom: 10px; }
-	.welcome p:last-child {
-		padding-bottom: 75px;
-	}
+.welcome .button {
+	margin-top: 75px;
+}
+	.welcome p { font-size: 18px; margin-bottom: 20px; }
 	.welcome h1 {
 		font-size: 38px !important;
 		margin-bottom: 15px !important;
