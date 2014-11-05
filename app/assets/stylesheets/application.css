@@ -81,7 +81,7 @@ body {
 		font-size: 18px;
 	}
 	.welcome h1 {
-		font-size: 38px;
+		font-size: 38px !important;
 		margin-bottom: 15px !important;
 	}
 
