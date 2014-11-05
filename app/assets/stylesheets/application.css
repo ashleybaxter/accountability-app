@@ -134,8 +134,27 @@ ul.header-nav {
 		color: #ffffff;
 		text-decoration: none;
 	}
-	.header-nav a:hover { color: #ffec5c }
+	.header-nav a:hover, .header-nav a:active, .header-nav a.active { color: #ffec5c; }
 	.header-nav li:hover { border: none; }
+	.header-nav a.active { background-color: transparent !important; }
+	.active {
+		position: relative;
+		background: #fdf6e1;
+	}
+	.active:after {
+		top: 100%;
+		left: 50%;
+		border: solid transparent;
+		content: " ";
+		height: 0;
+		width: 0;
+		position: absolute;
+		pointer-events: none;
+		border-color: rgba(253, 246, 225, 0);
+		border-bottom-color: #fdf6e1;
+		border-width: 10px;
+		margin-left: -10px;
+	}
 
 li {
 	padding: 15px;

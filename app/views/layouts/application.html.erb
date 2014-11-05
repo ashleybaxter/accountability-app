@@ -17,7 +17,7 @@
 				
 				<ul class="header-nav">
 					<% if current_user %>
-					<li><%= link_to "Today", root_path %></li>
+					<li><%= active_link_to "Today", root_path %></li>
 					<li><%= link_to "Sign out", signout_path %></li>
 					<% end %>
 				</ul>
