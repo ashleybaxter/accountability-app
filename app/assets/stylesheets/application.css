@@ -78,9 +78,11 @@ body {
 }
 	.welcome p {
 		padding-bottom: 75px;
+		font-size: 18px;
 	}
 	.welcome h1 {
-		margin-bottom: 10px !important;
+		font-size: 38px;
+		margin-bottom: 15px !important;
 	}
 
 .container {
