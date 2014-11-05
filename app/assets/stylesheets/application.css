@@ -311,10 +311,18 @@ input {
 }
 
 .working-out-logo {
-	background: url(logo.png) no-repeat 50% 100%;
 	height: 300px;
 	padding-top: 175px;
+	position: relative;
 }
+	.working-out-logo img {
+		position: absolute;
+		bottom: 0;
+		display: block;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+	}
 
 .footer-container {
 	background: -webkit-linear-gradient(#f57651, #f93c4d);

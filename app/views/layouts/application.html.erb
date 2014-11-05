@@ -13,7 +13,7 @@
 <div class="footer-container">
 	<div class="container">
 		<div class="grid grid__col grid__col--12-of-12 header">
-				<%= link_to image_tag('toddle.png'), root_path %>
+				<%= link_to image_tag_with_at2x("toddle.png"), root_path %>
 				
 				<ul class="header-nav">
 					<% if current_user %>
@@ -40,6 +40,7 @@
 </div>
 
 <div class="working-out-logo">
+	<%= link_to image_tag_with_at2x("logo.png"), root_path %>
 </div>
 <div class="footer-container">
 	<div class="container">
