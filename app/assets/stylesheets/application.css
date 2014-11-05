@@ -113,7 +113,7 @@ h1.header-red, h1.header-green {
 
 ul.header-nav {
 	float: right;
-	padding-top: 2%;
+	padding-top: 0.5%;
 	font-weight: 600;
 }
 
@@ -125,6 +125,7 @@ ul.header-nav {
 	border: none;
 	position: static;
 	text-align: right;
+	text-transform: none;
 }
 	.header-nav li:last-child {
 		margin-left: 15px;
