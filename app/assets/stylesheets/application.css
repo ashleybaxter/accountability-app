@@ -77,12 +77,12 @@ body {
 	text-align: center;
 }
 .welcome .button {
-	margin-top: 75px;
+	margin-top: 35px;
 }
-	.welcome p { font-size: 18px; margin-bottom: 20px; }
+	.welcome p { font-size: 18px; margin-bottom: 30px; }
 	.welcome h1 {
 		font-size: 38px !important;
-		margin-bottom: 15px !important;
+		margin: 100px 0 20px 0;
 		color: #f75b4f !important;
 	}
 
@@ -259,7 +259,6 @@ input {
 	padding: 15px;
 	width: 248px;
 	margin-top: 10px;
-	text-transform: uppercase;
 }
 	input#goal_ids_ {
 		width: 12px;
@@ -314,21 +313,25 @@ input {
 ::-webkit-input-placeholder {
 	color:  #d0c49e;
 	font-style: italic;
+	text-transform: uppercase;
 }
 
 :-moz-placeholder {
 	color:  #d0c49e;
 	font-style: italic;
+	text-transform: uppercase;
 }
 
 ::-moz-placeholder {
 	color:  #d0c49e;
 	font-style: italic;
+	text-transform: uppercase;
 }
 
 :-ms-input-placeholder {  
 	color:  #d0c49e;
 	font-style: italic;
+	text-transform: uppercase;
 }
 
 .working-out-logo {
@@ -384,6 +387,7 @@ footer {
 	background-color: #f8f0d9;
 	border: 1px solid #d0c49e;
 	padding: 10px;
+	padding-left: 10px !important;
 	text-align: center;
 	margin-bottom: 35px;
 	color: #d0c49e;
