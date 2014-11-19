@@ -380,11 +380,22 @@ footer {
 		margin: 0 auto;
 		line-height: 28px;
 	}
+	
+li:hover > .delete { display: block; z-index: 99999; }
+li:after{
+    content:'';
+    position:absolute;
+    height:100%;
+    top:0;
+    right:-100px;
+    width:100px;
+}
 
 .delete {
 	position: absolute;
 	right: -30px;
 	bottom: 35%;
+	display: none;
 }
 
 label.not-done {
