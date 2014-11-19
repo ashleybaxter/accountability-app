@@ -1,11 +1,12 @@
 <% if current_user %>
 
 <% if @goals_incomplete.any? && @goals_incomplete.last.created_at.to_date == Date.today %>
+
 <div class="grid__col grid__col--3-of-5 grid__col--centered goals-index">
 <h1 class="header-red">Today's Goals</h1>
 <ul>
 <% for goal in @goals_incomplete %>
-	<li><%= goal.title %><%= link_to image_tag('delete.png'), goal_path(goal), :class => 'delete', :method => 'delete', :confirm => "Are you sure?" %></li>
+	<li><%= goal.title %><%= link_to image_tag('delete.png'), goal_path(goal), :class => 'delete', :method => 'delete', data: { confirm: "Are you sure?" } %></li>
 <% end %>
 </ul>
 <%= render 'form' %>
@@ -18,9 +19,12 @@
 <%= form_tag complete_goals_path, :method => :put do %>
 <ul>
 <% for goal in @goals_incomplete %>
-	<li><%= check_box_tag "goal_ids_#{goal.id}", goal.id, false, :name => "goal_ids[]", :multiple => true %>
+	<li>
+			<%= check_box_tag "goal_ids_#{goal.id}", goal.id, false, :name => "goal_ids[]", :multiple => true %>
 			<%= label_tag ("goal_ids_#{goal.id}"), "Done" %>
-			<%= goal.title %><%= link_to image_tag('delete.png'), goal_path(goal), :class => 'delete', :method => 'delete', :confirm => "Are you sure?" %></li>
+			<%= check_box_tag "goals_ids_#{goal.id}", goal.id, false, :name => "goals_ids[]", :multiple => true %>
+			<%= label_tag ("goals_ids_#{goal.id}"), "Do Today", :class => "not-done" %>
+			<%= goal.title %><%= link_to image_tag('delete.png'), goal_path(goal), :class => 'delete', :method => 'delete', data: { confirm: "Are you sure?" } %></li>
 <% end %>
 </ul>
 <%= submit_tag "Save", class: "form_submit" %>

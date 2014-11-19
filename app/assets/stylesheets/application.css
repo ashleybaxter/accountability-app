@@ -160,7 +160,7 @@ ul.header-nav {
 li {
 	padding: 15px;
 	background-color: #f57551;
-	width: 250px;
+	width: 275px;
 	margin: 0 auto;
 	margin-bottom: 2px;
 	border: 1px solid #de512a;
@@ -172,7 +172,7 @@ li {
 		background-color: #eb5f38;
 		border: 1px solid #d51b1f;
 	}
-	li:hover input[type=checkbox] + label { display: block; }
+	li:hover input[type=checkbox] + label { display: block;}
 	.goals-index li:hover {
 		background-color: #f57551;
 	}
@@ -248,7 +248,7 @@ li {
 
 form#new_goal {
 	margin: 35px 0;
-	width: 282px;
+	width: 307px;
 	margin: 0 auto;
 	padding-left: 0;
 }
@@ -257,7 +257,7 @@ input {
 	background-color: #f8f0d9;
 	border: 2px dashed #d0c49e;
 	padding: 15px;
-	width: 248px;
+	width: 273px;
 	margin-top: 10px;
 }
 	input#goal_ids_ {
@@ -282,8 +282,7 @@ input {
 	input[type=checkbox] {
 		display:none;
 	}
-	input[type=checkbox] + label{
-		display:inline-block;
+	input[type=checkbox] + label {
 		margin:-2px;
 		padding: 4px 12px;
 		color: #20a266;
@@ -296,6 +295,11 @@ input {
 		background-color: #aff99e;
 		float: right;
 		display: none;
+	}
+	input[type=checkbox]:checked + label.not-done {
+		outline: 0;
+		background-color: #f6a288 !important;
+		display:block;
 	}
 	input[type=checkbox]:checked + label {
 		outline: 0;
@@ -381,6 +385,12 @@ footer {
 	position: absolute;
 	right: -30px;
 	bottom: 35%;
+}
+
+label.not-done {
+	color: #d2370c !important;
+	background-color: #ff906e !important;
+	margin-right: 8px !important;
 }
 
 .check-off {

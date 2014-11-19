@@ -28,6 +28,7 @@ class GoalsController < ApplicationController
   
   def complete
     Goal.update_all({done: true, :updated_at => Time.now}, {:id => params[:goal_ids]})
+    Goal.update_all({not_done: true}, {:id => params[:goals_ids]})
     redirect_to completed_goals_path
   end
   
@@ -46,7 +47,7 @@ class GoalsController < ApplicationController
   end
   
 	def app_params
-    params.require(:goal).permit(:title, :done)
+    params.require(:goal).permit(:title, :done, :not_done)
  	end
  	
 end

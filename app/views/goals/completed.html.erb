@@ -16,13 +16,13 @@
 <% unless @goals_today.empty? %>
 <ul>
 <% for goal in @goals_today %>
-	<li class="<%= 'rollover' if goal.created_at.to_date == Date.today.to_date-1 %>"><%= goal.title %>
+	<li class="<%= 'rollover' if goal.created_at.to_date <= 1.day.ago %>"><%= goal.title %>
 	<% if goal.created_at.to_date == Date.today.to_date-1 %>
 		<br /><span class="rollover-goal">From Yesterday</a>
 	<% end %>
 	<% if goal.created_at.to_date <= 2.days.ago %>
 		<br /><span class="rollover-goal">From A Few Days Ago</a>
-	<% end %><%= link_to image_tag('delete.png'), goal_path(goal), :class => 'delete', :method => 'delete', :confirm => "Are you sure?" %></li>
+	<% end %><%= link_to image_tag('delete.png'), goal_path(goal), :class => 'delete', :method => 'delete', data: { confirm: "Are you sure?" } %></li>
 <% end %>
 </ul>
 <% end %>
